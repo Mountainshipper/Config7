@@ -8,6 +8,10 @@ import java.util.NoSuchElementException;
 // there are different Bugs, wrong implementation, typos, ...
 // write Test-Cases (read Queue Interface for understanding methods) and use Debugging possibilies of your IDE
 
+
+/**
+ *Create object StringQueue. Fill with StringQueue.
+ */
 public class StringQueue implements IQueue {
 
   private List<String> elements = new ArrayList<String>();
@@ -17,6 +21,10 @@ public class StringQueue implements IQueue {
     this.maxSize = maxSize;
   }
 
+  /**
+   * @param obj
+   * @return
+   */
   @Override
   public boolean offer(String obj) {
     if (elements.size() != maxSize)
@@ -27,6 +35,9 @@ public class StringQueue implements IQueue {
     return true;
   }
 
+  /**
+   * @return
+   */
   @Override
   public String poll() {
     String element = peek();
@@ -38,6 +49,10 @@ public class StringQueue implements IQueue {
     return element;
   }
 
+  /**
+   *
+   * @return
+   */
   @Override
   public String remove() {
     String element = poll();
@@ -58,6 +73,10 @@ public class StringQueue implements IQueue {
     return element;
   }
 
+  /**
+   * 
+   * @return
+   */
   @Override
   public String element() {
     String element = peek();
