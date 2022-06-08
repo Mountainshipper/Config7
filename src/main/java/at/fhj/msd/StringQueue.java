@@ -22,6 +22,7 @@ public class StringQueue implements IQueue {
   }
 
   /**
+   * As long as maxSize is not full, we fill it with objects
    * @param obj
    * @return
    */
@@ -36,7 +37,7 @@ public class StringQueue implements IQueue {
   }
 
   /**
-   * @return
+   * @return element // If element size is 0, we return "Wrong size of elements-list" (Error List)
    */
   @Override
   public String poll() {
@@ -50,8 +51,7 @@ public class StringQueue implements IQueue {
   }
 
   /**
-   *
-   * @return
+   * @return element // If element == null, we return "there's no element any more"
    */
   @Override
   public String remove() {
@@ -63,7 +63,8 @@ public class StringQueue implements IQueue {
   }
 
   /**
-   * @return
+   * if elements.size() > 0  -> element = elements.get(0); else element = null;
+   * @return element
    */
   @Override
   public String peek() {
@@ -77,8 +78,8 @@ public class StringQueue implements IQueue {
   }
 
   /**
-   *
-   * @return
+   * element = peek() / if element = null -> throw NoSuchElementException("there's no element any more")
+   * @return element
    */
   @Override
   public String element() {
