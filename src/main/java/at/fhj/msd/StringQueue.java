@@ -61,6 +61,7 @@ public class StringQueue implements IQueue {
   @Override
   public String element() {
     String element = peek();
+
     if (element == null)
       throw new NoSuchElementException("there's no element any more");
 
