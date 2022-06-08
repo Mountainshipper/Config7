@@ -1,5 +1,7 @@
 package at.fhj.msd;
 
+import at.fhj.msd.IQueue;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -13,8 +15,8 @@ public class StringQueue implements IQueue {
   private List<String> elements = new ArrayList<String>();
   private int maxSize = 5;
 
-  public StringQueue(int maxsize) {
-    maxSize = maxSize;
+  public StringQueue(int maxSize) {
+    this.maxSize = maxSize;
   }
 
   @Override
@@ -68,4 +70,4 @@ public class StringQueue implements IQueue {
     return element;
   }
 
-}s
+}
