@@ -62,6 +62,9 @@ public class StringQueue implements IQueue {
     return element;
   }
 
+  /**
+   * @return
+   */
   @Override
   public String peek() {
     String element;
@@ -74,7 +77,7 @@ public class StringQueue implements IQueue {
   }
 
   /**
-   * 
+   *
    * @return
    */
   @Override
