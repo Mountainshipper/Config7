@@ -15,6 +15,20 @@
     </properties>
 
 <developers>
+
+
+        <developer>
+            <id>samuelspencer</id>
+            <name>Samuel Spencer</name>
+            <email>samuel.spencer@edu-fh.joannuem.at</email>
+            <organization>FH JOANNEUM GmbH</organization>
+            <organizationUrl>https://www.fh-joanneum.at/iit</organizationUrl>
+            <roles>
+                <role>Student</role>
+            </roles>
+            <timezone>Europe/Vienna</timezone>
+        </developer>
+    
     <developer>
         <id>robertbuch</id>
         <name>Robert Buch</name>
