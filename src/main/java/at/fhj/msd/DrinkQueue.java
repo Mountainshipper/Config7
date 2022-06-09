@@ -28,7 +28,7 @@ public class DrinkQueue implements IQueue {
         return true;
     }
     /**
-     * Get first element in arraylist and delete it.
+     * Get first element in arraylist
      * @return firstelement; If arrayList is empty, return null
      */
     @Override
@@ -49,13 +49,13 @@ public class DrinkQueue implements IQueue {
      * @return returns firstelement or "No such element"
      */
     @Override
-    public String remove() {
+    public String remove() throws NoSuchElementException{
         String firstElement = peek();
         try {
             elements.remove(0);
             return firstElement;
-        } catch (NoSuchElementException e) {
-            return "No such element";
+        } catch (IndexOutOfBoundsException e) {
+            throw new NoSuchElementException();
         }
     }
     /**
@@ -78,11 +78,11 @@ public class DrinkQueue implements IQueue {
      * @return firstelement or "No such element"
      */
     @Override
-    public String element() {
+    public String element() throws NoSuchElementException{
         try {
             return elements.get(0).getName();
-        } catch (NoSuchElementException e) {
-            return "No such element";
+        } catch (IndexOutOfBoundsException e) {
+            throw new NoSuchElementException();
         }
     }
 }

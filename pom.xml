@@ -77,7 +77,7 @@
                     <redirectTestOutputToFile>true</redirectTestOutputToFile>
                     <forkCount>3</forkCount>
                     <reuseForks>true</reuseForks>
-                    <!--                    <argLine>${surefireArgLine} -Xmx1024m -noverify</argLine>-->
+<!--                                        <argLine>${surefireArgLine} -Xmx1024m -noverify</argLine>-->
                 </configuration>
             </plugin>
             <plugin>
