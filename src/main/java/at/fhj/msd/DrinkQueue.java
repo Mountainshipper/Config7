@@ -27,4 +27,24 @@ public class DrinkQueue implements IQueue {
 
         return true;
     }
+
+    @Override
+    public String poll() {
+        return null;
+    }
+
+    @Override
+    public String remove() {
+        return null;
+    }
+
+    @Override
+    public String peek() {
+        return null;
+    }
+
+    @Override
+    public String element() {
+        return null;
+    }
 }
