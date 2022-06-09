@@ -27,7 +27,10 @@ public class DrinkQueue implements IQueue {
 
         return true;
     }
-
+    /**
+     * Get first element in arraylist and delete it.
+     * @return firstelement; If arrayList is empty, return null
+     */
     @Override
     public String poll() {
         String firstElement = peek();
@@ -55,7 +58,10 @@ public class DrinkQueue implements IQueue {
             return "No such element";
         }
     }
-
+    /**
+     * get first element in arraylist.
+     * @return firstelement; If allayList is empty, return null
+     */
     @Override
     public String peek() {
         if (elements.size() == 0)
