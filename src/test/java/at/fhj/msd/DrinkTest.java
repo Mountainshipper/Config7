@@ -19,6 +19,20 @@ public class DrinkTest extends TestCase {
         Assertions.assertTrue(drinkQueue.offer("Andys Stress Cocktail"));
     }
 
+    @Test
+    public void testPeek() {
+        drinkQueue.offer("Nichts für Humorlose");
+        Assertions.assertEquals("Nichts für Humorlose", drinkQueue.peek());
+    }
+
+    @Test
+    public void testElement() {
+        drinkQueue.offer("blabla");
+        Assertions.assertThrows(NoSuchElementException.class,()->drinkQueue.element());
+    }
+
+
+
 
 
 
