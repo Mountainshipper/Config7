@@ -19,7 +19,7 @@ public class DrinkTest extends TestCase {
         Assertions.assertTrue(drinkQueue.offer("Andys Stress Cocktail"));
     }
 
-   
+
 
 
 
