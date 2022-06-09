@@ -30,7 +30,12 @@ public class DrinkQueue implements IQueue {
 
     @Override
     public String poll() {
-        return null;
+        String firstElement = peek();
+        if (elements.size() == 0)
+            return null;
+        else
+            elements.remove(0);
+        return firstElement;
     }
 
 
@@ -53,7 +58,10 @@ public class DrinkQueue implements IQueue {
 
     @Override
     public String peek() {
-        return null;
+        if (elements.size() == 0)
+            return null;
+        else
+            return elements.get(0).getName();
     }
 
 
