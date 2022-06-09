@@ -22,6 +22,28 @@ public class DrinkTest extends TestCase {
 
 
 
+    /**
+     * test
+     * expected String "Andys Stress Cocktail"
+     */
+    @Test
+    public void testPoll() {
+        drinkQueue.offer("Andys Stress Cocktail");
+        Assertions.assertEquals("Andys Stress Cocktail", drinkQueue.poll());
+    }
+
+
+    /**
+     * test
+     * wrong String, exception throws
+     */
+    @Test
+    public void testRemove() {
+        drinkQueue.offer("An");
+        Assertions.assertThrows(NoSuchElementException.class,()->drinkQueue.remove());
+    }
+
+
 
 
 
