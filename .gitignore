@@ -1,4 +1,4 @@
 *.html
 *.pdf
-*.idea
-*target/
+.idea/
+.target/
