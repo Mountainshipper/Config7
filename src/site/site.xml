@@ -4,7 +4,9 @@
     <body>
         <menu name="Overview">
             <item name="Introduction" href="index.html"/>
-            <item name="Robert_Buch" href="Buch.html"/>
+            <item name="Samuel Spencer" href="Spencer.html"/>
+            <item name="Robert Buch" href="Buch.html"/>
+            <item name="Andreas Schweighofer" href="Schweighofer.html"/>
         </menu>
         <menu ref="reports"/>
         <menu ref="parent"/>
