@@ -24,6 +24,16 @@ public class DrinkTest extends TestCase {
     }
 
     /**
+     * Test-method for offer
+     * expected to return false
+     */
+    @Test
+    public void testOfferFalse() {
+        Assertions.assertFalse(drinkQueue.offer("blabla"));
+    }
+
+
+    /**
      * Test-method for peek
      */
     @Test
