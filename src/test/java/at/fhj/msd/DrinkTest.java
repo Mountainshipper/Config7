@@ -8,12 +8,16 @@ import java.util.NoSuchElementException;
 
 public class DrinkTest extends TestCase {
     private DrinkQueue drinkQueue;
-
+    /**
+     * setup
+     */
     @BeforeEach
     public void setup(){
         drinkQueue = new DrinkQueue(5);
     }
-
+    /**
+     * Test-method for testAndysStressCocktail
+     */
     @Test
     public void testAndysStressCocktail() {
         Assertions.assertTrue(drinkQueue.offer("Andys Stress Cocktail"));
@@ -36,9 +40,6 @@ public class DrinkTest extends TestCase {
         drinkQueue.offer("blabla");
         Assertions.assertThrows(NoSuchElementException.class,()->drinkQueue.element());
     }
-
-
-
 
 
 
