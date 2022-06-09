@@ -10,20 +10,28 @@ import java.util.NoSuchElementException;
 
 
 /**
- *Create object StringQueue. Fill with StringQueue.
+ *  Create class StringQueue
+ *  Create ArrayList elements
+ *  Create integer maxsize
  */
 public class StringQueue implements IQueue {
 
   private List<String> elements = new ArrayList<String>();
   private int maxSize = 5;
 
+
+  /**
+   * constructor
+   * set int maxSize
+   * @param maxSize
+   */
   public StringQueue(int maxSize) {
     this.maxSize = maxSize;
   }
 
   /**
    * As long as maxSize is not full, we fill it with objects
-   * @param obj
+   * @param obj values for ArrayList
    * @return
    */
   @Override
@@ -38,6 +46,7 @@ public class StringQueue implements IQueue {
 
   /**
    * @return element // If element size is 0, we return "Wrong size of elements-list" (Error List)
+   * @return
    */
   @Override
   public String poll() {
