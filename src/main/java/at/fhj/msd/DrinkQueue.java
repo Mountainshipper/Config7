@@ -33,9 +33,22 @@ public class DrinkQueue implements IQueue {
         return null;
     }
 
+
+
+    /**
+     * removes first element in arraylist
+     * if no elment exists, it throws NoSuchElementException
+     * @return returns firstelement or "No such element"
+     */
     @Override
     public String remove() {
-        return null;
+        String firstElement = peek();
+        try {
+            elements.remove(0);
+            return firstElement;
+        } catch (NoSuchElementException e) {
+            return "No such element";
+        }
     }
 
     @Override
@@ -43,8 +56,19 @@ public class DrinkQueue implements IQueue {
         return null;
     }
 
+
+
+    /**
+     * get first element in arraylist
+     * but if no elements exists, NoSuchElementException is throwin
+     * @return firstelement or "No such element"
+     */
     @Override
     public String element() {
-        return null;
+        try {
+            return elements.get(0).getName();
+        } catch (NoSuchElementException e) {
+            return "No such element";
+        }
     }
 }
