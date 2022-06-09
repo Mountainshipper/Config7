@@ -46,10 +46,6 @@
             </roles>
             <timezone>Europe/Vienna</timezone>
         </developer>
-
-
-
-
     </developers>
     <dependencies>
         <dependency>
