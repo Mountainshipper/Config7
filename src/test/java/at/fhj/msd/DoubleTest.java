@@ -33,15 +33,21 @@ public class DoubleTest extends TestCase {
     }
 
     /**
-     * Test the element method
+     * Test the element method with throwException
      */
     @Test
-    public void testElement() {
+    public void testElementException() {
         doubleQueue.offer("blabla");
         Assertions.assertThrows(NoSuchElementException.class,()->doubleQueue.element());
     }
 
 
+
+    @Test
+    public void testElementCorrect() {
+        doubleQueue.offer("1.1");
+        Assertions.assertEquals("1.1", doubleQueue.element());
+    }
 
     /**
      * test
@@ -53,19 +59,37 @@ public class DoubleTest extends TestCase {
         Assertions.assertEquals("4.4", doubleQueue.poll());
     }
 
+    /**
+     * test poll
+     * expected null
+     */
+    @Test
+    public void testPollNull() {
+        Assertions.assertEquals("Wrong size of elements-list", doubleQueue.poll());
+    }
+
+
 
     /**
      * test
      * wrong String, exception throws
      */
     @Test
-    public void testRemove() {
+    public void testRemoveException() {
         doubleQueue.offer("blablabla");
         Assertions.assertThrows(NoSuchElementException.class,()->doubleQueue.remove());
     }
 
 
-
+    /**
+     * test remove()
+     * expected output "Nichts für Humorlose"
+     */
+    @Test
+    public void testRemoveCorrect() {
+        doubleQueue.offer("1.5");
+        Assertions.assertEquals("1.5", doubleQueue.remove());
+    }
 
 
 }

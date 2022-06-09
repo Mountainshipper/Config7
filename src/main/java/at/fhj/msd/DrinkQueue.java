@@ -13,13 +13,24 @@ public class DrinkQueue implements IQueue {
         this.maxSize = maxSize;
     }
 
+    public void setMaxSize(int maxSize) {
+        this.maxSize = maxSize;
+    }
+
+
+    /**
+     *if arraylist is not full,
+     * add obj and create new Liquid and new simpledrink
+     * @param obj name of cocktail
+     * @return
+     */
     @Override
     public boolean offer(String obj) {
         if (elements.size() != maxSize) {
             switch (obj) {
                 case "Andys Stress Cocktail" -> elements.add(new SimpleDrink(obj, new Liquid("Marillen-Schnaps", 0.5, 0.9)));
                 case "Nichts für Humorlose" -> elements.add(new SimpleDrink(obj, new Liquid("Gin", 0.2, 0.3)));
-                case "Suffering Bastard" -> elements.add(new SimpleDrink(obj, new Liquid("Whiskey", 0.2, 0.6)));
+               // case "Suffering Bastard" -> elements.add(new SimpleDrink(obj, new Liquid("Whiskey", 0.2, 0.6)));
             }
         }
         else

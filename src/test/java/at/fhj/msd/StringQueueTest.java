@@ -4,23 +4,25 @@ import junit.framework.TestCase;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import java.util.NoSuchElementException;
 
-public class DrinkTest extends TestCase {
-    private DrinkQueue drinkQueue;
+public class StringQueueTest extends TestCase {
+    private DrinkQueue stringQueue;
 
     /**
      * setup
      */
     @BeforeEach
     public void setup(){
-        drinkQueue = new DrinkQueue(5);
+        stringQueue = new DrinkQueue(5);
     }
     /**
      * Test-method for testAndysStressCocktail
      */
     @Test
-    public void testAndysStressCocktail() {Assertions.assertTrue(drinkQueue.offer("Andys Stress Cocktail"));
+    public void testAndysStressCocktail() {
+        Assertions.assertTrue(stringQueue.offer("Andys Stress Cocktail"));
     }
 
     /**
@@ -29,16 +31,16 @@ public class DrinkTest extends TestCase {
      */
     @Test
     public void testOfferFalse() {
-        drinkQueue.setMaxSize(0);
-        Assertions.assertFalse(drinkQueue.offer("Hallelujah"));
+        stringQueue.setMaxSize(0);
+        Assertions.assertFalse(stringQueue.offer("huhu"));
     }
     /**
      * Test-method for peek
      */
     @Test
     public void testPeek() {
-        drinkQueue.offer("Nichts für Humorlose");
-        Assertions.assertEquals("Nichts für Humorlose", drinkQueue.peek());
+        stringQueue.offer("Nichts für Humorlose");
+        Assertions.assertEquals("Nichts für Humorlose", stringQueue.peek());
     }
 
     /**
@@ -46,14 +48,14 @@ public class DrinkTest extends TestCase {
      */
     @Test
     public void testElementException() {
-        drinkQueue.offer("blabla");
-        Assertions.assertThrows(NoSuchElementException.class,()->drinkQueue.element());
+        stringQueue.offer("blabla");
+        Assertions.assertThrows(NoSuchElementException.class,()->stringQueue.element());
     }
 
     @Test
     public void testElementCorrect() {
-        drinkQueue.offer("Nichts für Humorlose");
-        Assertions.assertEquals("Nichts für Humorlose", drinkQueue.element());
+        stringQueue.offer("Nichts für Humorlose");
+        Assertions.assertEquals("Nichts für Humorlose", stringQueue.element());
     }
 
     /**
@@ -62,8 +64,8 @@ public class DrinkTest extends TestCase {
      */
     @Test
     public void testPoll() {
-        drinkQueue.offer("Andys Stress Cocktail");
-        Assertions.assertEquals("Andys Stress Cocktail", drinkQueue.poll());
+        stringQueue.offer("Andys Stress Cocktail");
+        Assertions.assertEquals("Wrong size of elements-list", stringQueue.poll());
     }
 
     /**
@@ -72,7 +74,7 @@ public class DrinkTest extends TestCase {
      */
     @Test
     public void testPollNull() {
-        Assertions.assertNull(drinkQueue.poll());
+        Assertions.assertNull(stringQueue.poll());
     }
 
 
@@ -82,8 +84,8 @@ public class DrinkTest extends TestCase {
      */
     @Test
     public void testRemoveException() {
-        drinkQueue.offer("An");
-        Assertions.assertThrows(NoSuchElementException.class,()->drinkQueue.remove());
+        stringQueue.offer("An");
+        Assertions.assertThrows(NoSuchElementException.class,()->stringQueue.remove());
     }
 
 
@@ -93,8 +95,8 @@ public class DrinkTest extends TestCase {
      */
     @Test
     public void testRemoveCorrect() {
-        drinkQueue.offer("Nichts für Humorlose");
-        Assertions.assertEquals("Nichts für Humorlose", drinkQueue.remove());
+        stringQueue.offer("Nichts für Humorlose");
+        Assertions.assertEquals("Nichts für Humorlose", stringQueue.remove());
     }
 
 }
