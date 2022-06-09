@@ -4,12 +4,24 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
-    <artifactId>Config7</artifactId>
+    <groupId>at.fhj.msd</groupId>
+    <artifactId>msd21_spencer_samuel</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <url>https://github.com/Mountainshipper/Config7.git</url>
-
-
+    <url>https://github.com/Mountainshipper/msd21_Spencer_Samuel.git</url>
+    <!--  developers information, will be used for documentation  -->
+    <developers>
+        <developer>
+            <id>samuelspencer</id>
+            <name>Samuel Spencer</name>
+            <email>samuel.spencer@edu-fh.joannuem.at</email>
+            <organization>FH JOANNEUM GmbH</organization>
+            <organizationUrl>https://www.fh-joanneum.at/iit</organizationUrl>
+            <roles>
+                <role>Student</role>
+            </roles>
+            <timezone>Europe/Vienna</timezone>
+        </developer>
+    </developers>
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -35,10 +47,10 @@
             <version>2.17.2</version>
         </dependency>
         <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-javadoc-plugin</artifactId>
-            <version>3.4.0</version>
-        </dependency>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.4.0</version>
+    </dependency>
         <dependency>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-project-info-reports-plugin</artifactId>
@@ -48,21 +60,16 @@
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
             <version>2.17.2</version>
+
         </dependency>
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.8.1</version>
-        </dependency>
+
+
     </dependencies>
-
-
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
                 <configuration>
                     <source>16</source>
                     <target>16</target>
@@ -71,13 +78,14 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.1</version>
+                <version> 2.22.1</version>
                 <configuration>
                     <printSummary>false</printSummary>
                     <redirectTestOutputToFile>true</redirectTestOutputToFile>
                     <forkCount>3</forkCount>
                     <reuseForks>true</reuseForks>
-<!--                                        <argLine>${surefireArgLine} -Xmx1024m -noverify</argLine>-->
+                    <!--suppress UnresolvedMavenProperty -->
+                    <argLine>${surefireArgLine} -Xmx1024m -noverify</argLine>
                 </configuration>
             </plugin>
             <plugin>
@@ -88,7 +96,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.6</version>
+                <version> 0.8.6</version>
                 <executions>
                     <!-- prepare agent for measuring unit tests -->
                     <execution>
@@ -154,51 +162,4 @@
         <maven.compiler.source>18</maven.compiler.source>
         <maven.compiler.target>18</maven.compiler.target>
     </properties>
-
-
-
-    <developers>
-
-
-        <developer>
-            <id>samuelspencer</id>
-            <name>Samuel Spencer</name>
-            <email>samuel.spencer@edu-fh.joannuem.at</email>
-            <organization>FH JOANNEUM GmbH</organization>
-            <organizationUrl>https://www.fh-joanneum.at/iit</organizationUrl>
-            <roles>
-                <role>Student</role>
-            </roles>
-            <timezone>Europe/Vienna</timezone>
-        </developer>
-
-        <developer>
-            <id>robertbuch</id>
-            <name>Robert Buch</name>
-            <email>robert.buch@fh-joanneum.at</email>
-            <url>https://www.robert-buch.at</url>
-            <organization>FH JOANNEUM GmbH</organization>
-            <organizationUrl>https://www.fh-joanneum.at/iit</organizationUrl>
-            <roles>
-                <role>software developer</role>
-            </roles>
-            <timezone>Europe/Vienna</timezone>
-        </developer>
-
-        <developer>
-            <id>andreasschweighofer</id>
-            <name>Andreas Schweighofer</name>
-            <email>andreas.schweighofer@fh-joanneum.at</email>
-            <organization>FH JOANNEUM GmbH</organization>
-            <organizationUrl>https://www.fh-joanneum.at/iit</organizationUrl>
-            <roles>
-                <role>Student</role>
-            </roles>
-            <timezone>Europe/Vienna</timezone>
-        </developer>
-    </developers>
-
-
 </project>
-
-
