@@ -7,6 +7,9 @@ import org.junit.jupiter.api.Test;
 
 import java.util.NoSuchElementException;
 
+/**
+ * testing StringQueue
+ */
 public class StringQueueTest extends TestCase {
     private StringQueue stringQueue;
 

@@ -6,6 +6,10 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.util.NoSuchElementException;
 
+
+/**
+ * testing DoubleQueue
+ */
 public class DoubleQueueTest extends TestCase {
     private DoubleQueue doubleQueue;
     /**
@@ -68,7 +72,6 @@ public class DoubleQueueTest extends TestCase {
     public void testPollNull() {
         Assertions.assertEquals("Wrong size of elements-list", doubleQueue.poll());
     }
-
 
 
     /**

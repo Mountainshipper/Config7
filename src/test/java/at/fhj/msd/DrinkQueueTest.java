@@ -6,6 +6,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.util.NoSuchElementException;
 
+/**
+ * testing DrinkQueue
+ */
 public class DrinkQueueTest extends TestCase {
     private DrinkQueue drinkQueue;
 
