@@ -12,7 +12,8 @@ Robert Buch
 - [X] JavDoc Kommentare
 - [X] Tests - mvn test
 - [X] Queue Version, die es ermöglicht Double Werte in einer Queue zu verwalten
-- [ ] Maven site Dokumentation erstellen
+- [X] Maven site Dokumentation erstellen
+- [X] Fixing bugs
 
 
 
