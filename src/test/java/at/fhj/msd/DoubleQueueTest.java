@@ -41,8 +41,9 @@ public class DoubleQueueTest extends TestCase {
         Assertions.assertThrows(NoSuchElementException.class,()->doubleQueue.element());
     }
 
-
-
+    /**
+     * Test the element method with 1.1
+     */
     @Test
     public void testElementCorrect() {
         doubleQueue.offer("1.1");

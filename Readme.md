@@ -14,7 +14,3 @@ Robert Buch
 - [X] Queue Version, die es ermöglicht Double Werte in einer Queue zu verwalten
 - [X] Maven site Dokumentation erstellen
 - [X] Fixing bugs
-
-
-
-
