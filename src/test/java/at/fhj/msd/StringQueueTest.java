@@ -31,7 +31,7 @@ public class StringQueueTest extends TestCase {
      */
     @Test
     public void testOfferFalse() {
-        //stringQueue.setMaxSize(0);
+        stringQueue.setMaxSize(0);
         Assertions.assertTrue(stringQueue.offer("huhu"));
     }
     /**
