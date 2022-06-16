@@ -6,7 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.util.NoSuchElementException;
 
-public class DoubleTest extends TestCase {
+public class DoubleQueueTest extends TestCase {
     private DoubleQueue doubleQueue;
     /**
      * setup
