@@ -32,7 +32,7 @@ public class StringQueueTest extends TestCase {
     @Test
     public void testOfferFalse() {
         stringQueue.setMaxSize(0);
-        Assertions.assertTrue(stringQueue.offer("huhu"));
+        Assertions.assertFalse(stringQueue.offer("huhu"));
     }
     /**
      * Test-method for peek
