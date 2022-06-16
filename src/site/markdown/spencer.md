@@ -16,5 +16,6 @@ Create Project
 12. Creating stringQeueTest testcases
 13. Running website and jococo. Fixing problems. (in pom one file needs to be supressed(otherwise jococo is skipped (file not created))) (surefireArgLine) 
 14. Fixing site.xml
-14. Adding testcases. 
+14. Adding and testing testcases. (testElementCorrect, testPollNull, testRemoveException, testRemoveCorrect, testOfferFalse,  testElementCorrect, testPollNull
 15. Creating Spencer.md 
+16. Fixing Bugs (StringQueue and Test)
