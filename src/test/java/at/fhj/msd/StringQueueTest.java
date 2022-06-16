@@ -8,14 +8,14 @@ import org.junit.jupiter.api.Test;
 import java.util.NoSuchElementException;
 
 public class StringQueueTest extends TestCase {
-    private DrinkQueue stringQueue;
+    private StringQueue stringQueue;
 
     /**
      * setup
      */
     @BeforeEach
     public void setup(){
-        stringQueue = new DrinkQueue(5);
+        stringQueue = new StringQueue(5);
     }
     /**
      * Test-method for testAndysStressCocktail
@@ -47,7 +47,7 @@ public class StringQueueTest extends TestCase {
      * Test the element method
      */
     @Test
-    public void testElementException() {
+    public void testElementFalse() {
         stringQueue.offer("blabla");
         Assertions.assertThrows(NoSuchElementException.class,()->stringQueue.element());
     }
@@ -65,7 +65,7 @@ public class StringQueueTest extends TestCase {
     @Test
     public void testPoll() {
         stringQueue.offer("Andys Stress Cocktail");
-        Assertions.assertEquals("Wrong size of elements-list", stringQueue.poll());
+        Assertions.assertEquals("Andys Stress Cocktail", stringQueue.poll());
     }
 
     /**
