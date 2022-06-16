@@ -4,6 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+
+/**
+ * class DrinQueue
+ *  Create ArrayList elements
+ *  Create integer maxsize
+ *  implements Interface IQueue
+ */
 public class DrinkQueue implements IQueue {
 
     private List<Drink> elements = new ArrayList<Drink>();
