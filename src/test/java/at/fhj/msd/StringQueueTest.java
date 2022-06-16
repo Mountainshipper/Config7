@@ -70,11 +70,11 @@ public class StringQueueTest extends TestCase {
 
     /**
      * test poll
-     * expected null
+     * expected String wrong size of elements-list
      */
     @Test
-    public void testPollNull() {
-        Assertions.assertNull(stringQueue.poll());
+    public void testPollWrongSize() {
+        Assertions.assertEquals("Wrong size of elements-list",stringQueue.poll());
     }
 
 
