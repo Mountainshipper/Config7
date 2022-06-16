@@ -1,5 +1,9 @@
 package at.fhj.msd;
 
+/**
+ * Interface class IQueue
+ * that has the following methods.
+ */
 // fastly written (not really nice) comments but good enough to understand
 public interface IQueue {
   /* 

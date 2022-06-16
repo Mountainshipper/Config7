@@ -5,7 +5,12 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 
-
+/**
+ *  class DoubleQueue
+ *  Create ArrayList double elements
+ *  Create integer maxsize
+ *  implements Interface IQueue
+ */
 public class DoubleQueue implements IQueue {
     private List<Double> elements = new ArrayList<Double>();
     private int maxSize = 5;
@@ -15,7 +20,7 @@ public class DoubleQueue implements IQueue {
      * constructor
      * set int maxSize
      *
-     * @param maxSize
+     * @param maxSize maxsize
      */
     public DoubleQueue(int maxSize) {
         this.maxSize = maxSize;
