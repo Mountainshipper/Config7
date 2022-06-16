@@ -12,5 +12,6 @@
 8. Add schweighofer.md
 9. Start maven test
 10. Maven site
+11. Bug fixing in StringQueueTest.java
 
 **Andreas Schweighofer**
