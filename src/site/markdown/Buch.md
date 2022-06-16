@@ -8,5 +8,6 @@
 - add peek() and add element() in Class DoubleQueue
 - add javadoc comments
 - add site file structure
+- fix bugs
 - start mvn site
 - create buch.md
