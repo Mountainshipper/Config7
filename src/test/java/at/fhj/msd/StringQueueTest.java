@@ -18,10 +18,11 @@ public class StringQueueTest extends TestCase {
         stringQueue = new StringQueue(5);
     }
     /**
-     * Test-method for testAndysStressCocktail
+     * Test-method for offer()
+     * expected output: true
      */
     @Test
-    public void testAndysStressCocktail() {
+    public void testOfferTrue() {
         Assertions.assertTrue(stringQueue.offer("Andys Stress Cocktail"));
     }
 
@@ -44,24 +45,27 @@ public class StringQueueTest extends TestCase {
     }
 
     /**
-     * Test the element method
+     * Test element method
+     * expected output: Exception NoSuchElementException
      */
     @Test
     public void testElementException() {
         Assertions.assertThrows(NoSuchElementException.class,()->stringQueue.element());
     }
 
+    /**
+     * Test element method
+     * expected output: String "Nichts für Humorlose"
+     */
     @Test
     public void testElementCorrect() {
         stringQueue.offer("Nichts für Humorlose");
         Assertions.assertEquals("Nichts für Humorlose", stringQueue.element());
     }
 
-
-
     /**
-     * test poll()
-     * expected String "Andys Stress Cocktail"
+     * Test poll method
+     * expected output: String "Andys Stress Cocktail"
      */
     @Test
     public void testPoll() {
@@ -70,28 +74,26 @@ public class StringQueueTest extends TestCase {
     }
 
     /**
-     * test poll
-     * expected String wrong size of elements-list
+     * Test poll method
+     * expected output: String "Wrong size of elements-list"
      */
     @Test
     public void testPollWrongSize() {
         Assertions.assertEquals("Wrong size of elements-list",stringQueue.poll());
     }
 
-
     /**
-     * test remove()
-     * wrong String, exception throws
+     * Test remove method
+     * expected output: Exception
      */
     @Test
     public void testRemoveException() {
         Assertions.assertThrows(NoSuchElementException.class,()->stringQueue.remove());
     }
 
-
     /**
-     * test remove()
-     * expected output "Nichts für Humorlose"
+     * Test remove method
+     * expected output: String "Nichts für Humorlose"
      */
     @Test
     public void testRemoveCorrect() {
